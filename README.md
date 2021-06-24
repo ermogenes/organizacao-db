@@ -35,7 +35,7 @@ cd organizacao-db
 2. Execute o comando de uma das versões abaixo:
 
   - _MySQL_: `docker compose up mysql`
-  - _MSQL Server_: `docker compose up sqlserver`
+  - _SQL Server_: `docker compose up sqlserver`
   - _Ambos_: `docker compose up`
 
 ### Credenciais:
