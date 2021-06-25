@@ -70,3 +70,31 @@ docker compose --file dc-sqlserver-com-dados.yml up
 ```bash
 docker compose --file dc-somente-estrutura.yml up
 ```
+
+**Versões incluíndo um cluster de Kafka Connect**
+
+- _Ambos_ com carga de dados:
+
+```bash
+docker compose --file dc-kafka.yml up
+```
+
+- Carga de dados somente no _MySQL_:
+
+```bash
+docker compose --file dc-mysql-com-dados-kafka.yml up
+```
+
+- Carga de dados somente no _SQL Server_:
+
+```bash
+docker compose --file dc-sqlserver-com-dados-kafka.yml up
+```
+
+- Somente as estruturas, sem dados:
+
+```bash
+docker compose --file dc-somente-estrutura-kafka.yml up
+```
+
+_Kafka UI em [http://localhost:3030](http://localhost:3030)._
