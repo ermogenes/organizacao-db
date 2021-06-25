@@ -20,7 +20,7 @@ services:
       - 1434:1433 # SQL Server na porta 1434
     volumes:
       - type: bind
-        source: ./scripts/sqlserver/sqlserver-organizacao-DDL.sql
+        source: ./scripts/sqlserver/sqlserver-organizacao-DDL-sem-IDENTITY.sql
         target: /db-init.sql
       - type: bind
         source: ./scripts/sqlserver/entrypoint.sh

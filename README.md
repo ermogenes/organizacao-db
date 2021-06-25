@@ -8,10 +8,12 @@ Implementações em MySQL e Microsoft SQL Server.
 
 - MySQL
   - [DDL (somente estrutura)](scripts/mysql/mysql-organizacao-DDL.sql)
+  - [DDL (somente estrutura, sem `AUTO_INCREMENT` nas PKs)](scripts/mysql/mysql-organizacao-DDL-sem-AUTO_INCREMENT.sql)
   - [DML (somente dados)](scripts/mysql/mysql-organizacao-DML.sql)
   - [Ambos (estrutura e dados)](scripts/mysql/mysql-organizacao-DDL-DML.sql)
 - SQL Server
   - [DDL (somente estrutura)](scripts/sqlserver/sqlserver-organizacao-DDL.sql)
+  - [DDL (somente estrutura, sem `IDENTITY` nas PKs)](scripts/sqlserver/sqlserver-organizacao-DDL-sem-IDENTITY.sql)
   - [DML (somente dados)](scripts/sqlserver/sqlserver-organizacao-DML.sql)
   - [Ambos (estrutura e dados)](scripts/sqlserver/sqlserver-organizacao-DDL-DML.sql)
 
@@ -81,13 +83,13 @@ docker compose --file dc-somente-estrutura.yml up
 docker compose --file dc-kafka.yml up
 ```
 
-- Carga de dados somente no _MySQL_:
+- Carga de dados somente no _MySQL_, e PKs no _SQL Server_ sem `IDENTITY`:
 
 ```bash
 docker compose --file dc-mysql-com-dados-kafka.yml up
 ```
 
-- Carga de dados somente no _SQL Server_:
+- Carga de dados somente no _SQL Server_, e PKs no _MySQL_ sem `AUTO_INCREMENT`:
 
 ```bash
 docker compose --file dc-sqlserver-com-dados-kafka.yml up
