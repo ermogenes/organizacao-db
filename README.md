@@ -71,6 +71,8 @@ docker compose --file dc-sqlserver-com-dados.yml up
 docker compose --file dc-somente-estrutura.yml up
 ```
 
+⚠ _Se quiser criar um ambiente que não reaproveite nada de execuções anteriores, adicione o parâmetro `--force-recreate`._
+
 **Versões incluíndo um cluster de Kafka Connect**
 
 - _Ambos_ com carga de dados:
