@@ -9,7 +9,7 @@ services:
       - 3307:3306 # MySQL na porta 3307
     volumes:
       - type: bind
-        source: ./scripts/mysql/mysql-organizacao-DDL-DML.sql
+        source: ./scripts/mysql/mysql-organizacao-DDL.sql
         target: /db-init.sql
   sqlserver:
     image: mcr.microsoft.com/mssql/server
@@ -21,7 +21,7 @@ services:
       - 1434:1433 # SQL Server na porta 1434
     volumes:
       - type: bind
-        source: ./scripts/sqlserver/sqlserver-organizacao-DDL-DML.sql
+        source: ./scripts/sqlserver/sqlserver-organizacao-DDL.sql
         target: /db-init.sql
       - type: bind
         source: ./scripts/sqlserver/entrypoint.sh

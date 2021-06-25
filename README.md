@@ -45,3 +45,28 @@ Serviço | Endereço | Usuário | Senha
 MySQL | `localhost:3307` | `root` | `root`
 SQL Server | `localhost,1434` | `sa` | `My_secret_!2#4%`
 
+### Todas as versões
+
+- _Ambos_ com carga de dados:
+
+```bash
+docker compose up
+```
+
+- Carga de dados somente no _MySQL_:
+
+```bash
+docker compose --file dc-mysql-com-dados.yml up
+```
+
+- Carga de dados somente no _SQL Server_:
+
+```bash
+docker compose --file dc-sqlserver-com-dados.yml up
+```
+
+- Somente as estruturas, sem dados:
+
+```bash
+docker compose --file dc-somente-estrutura.yml up
+```
