@@ -33,6 +33,8 @@ services:
     environment:
       ADV_HOST: 127.0.0.1
       RUNTESTS: 0
+      SAMPLEDATA: 0
+      RUNNING_SAMPLEDATA: 0
     ports:
       - 2181:2181 # Zookeeper
       - 9092:9092 # Kafka Broker
