@@ -101,4 +101,10 @@ docker compose --file dc-sqlserver-com-dados-kafka.yml up
 docker compose --file dc-somente-estrutura-kafka.yml up
 ```
 
+**Versão somente com Kafka Connect, sem MySQL e SQL Server**
+
+```bash
+docker compose --file dc-somente-kafka.yml up
+```
+
 _Kafka UI em [http://localhost:3030](http://localhost:3030)._
